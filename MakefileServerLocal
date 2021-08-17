@@ -1,0 +1,10 @@
+CC=gcc
+CFLAGS=-g -I.
+
+all: test_msg_server_local.o msg_conn.o msg_buf.o
+	$(CC) -o test_msg_server_local test_msg_server_local.o msg_conn.o msg_buf.o
+
+.PHONY: clean
+
+clean:
+	rm -f $(ODIR)/*.o

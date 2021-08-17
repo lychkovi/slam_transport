@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+test_msg_client
+test_msg_server
+test_msg_client_local
+test_msg_server_local
+
