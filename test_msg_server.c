@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     cfg.connRole = MsgConnRoleTcpReceiver;
     strncpy(cfg.servername, "localhost", sizeof("localhost"));
     cfg.portno = atoi(argv[1]);
-    cfg.mtu = 65536; //1460*10;      // максимальный размер одного IP пакета
+    cfg.mtu = 1460*10;      // максимальный размер одного IP пакета
     cfg.maxListLength = 10; // максимальная длина очереди сообщений
 
     // Инициализируем объект соединения
