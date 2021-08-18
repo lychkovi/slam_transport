@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
     cfg.connRole = MsgConnRoleTcpSender;
     strncpy(cfg.servername, argv[1], sizeof(cfg.servername));
     cfg.portno = atoi(argv[2]);
-    cfg.mtu = 65536;//1460*10;      // максимальный размер одного пакета
+    cfg.mtu = 1460*10;      // максимальный размер одного пакета
     cfg.maxListLength = 10; // максимальная длина очереди сообщений
 
     // Инициализируем объект соединения
@@ -142,7 +142,7 @@ int main(int argc, char *argv[])
 
     // В цикле отправляем несколько сообщений
     index = 0;
-    while (index < 100 && !needToExit)
+    while (/*index < 1000 &&*/ !needToExit)
     {
         // Делаем паузу перед отправкой нового сообщения
         usleep(330000);
